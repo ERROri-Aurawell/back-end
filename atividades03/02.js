@@ -1,11 +1,15 @@
 import rs from 'readline-sync';
 
-let turma = [
-    { nome: rs.question("Nome aluno: "), pri: rs.questionFloat("Primeiro bim: "), seg: rs.questionFloat("Segundo bim: "), ter: rs.questionFloat("Terceiro bim: "), qua: rs.questionFloat("Quarto bim: ") },
-    { nome: rs.question("Nome aluno: "), pri: rs.questionFloat("Primeiro bim: "), seg: rs.questionFloat("Segundo bim: "), ter: rs.questionFloat("Terceiro bim: "), qua: rs.questionFloat("Quarto bim: ") },
-    { nome: rs.question("Nome aluno: "), pri: rs.questionFloat("Primeiro bim: "), seg: rs.questionFloat("Segundo bim: "), ter: rs.questionFloat("Terceiro bim: "), qua: rs.questionFloat("Quarto bim: ") },
-    { nome: rs.question("Nome aluno: "), pri: rs.questionFloat("Primeiro bim: "), seg: rs.questionFloat("Segundo bim: "), ter: rs.questionFloat("Terceiro bim: "), qua: rs.questionFloat("Quarto bim: ") },
-];
+let qtAlunos = 0;
+let turma = [];
+
+qtAlunos = rs.questionInt("Digite a quantidade de alunos da turma: ");
+
+while (qtAlunos > 0) {
+    turma.push({ nome: rs.question("Nome aluno: "), pri: rs.questionFloat("Primeiro bim: "), seg: rs.questionFloat("Segundo bim: "), ter: rs.questionFloat("Terceiro bim: "), qua: rs.questionFloat("Quarto bim: ") });
+    console.log("------------")
+    qtAlunos--
+}
 
 let quantidade = turma.length;
 console.log(quantidade + " Alunos");
